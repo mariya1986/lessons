@@ -1,6 +1,12 @@
 <?php
 
+require_once "lib/functions.php";
+$r = "Там-та-рам";
+pripev($r);
+
 $name = "Иван";
+
+echo 5%2;
 
 
 
