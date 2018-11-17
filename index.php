@@ -2,9 +2,9 @@
 
 require_once "lib/functions.php";
 $r = "Там-та-рам";
-pripev($r);
+pripev(" drrdr","");
 
-$name = "Иван";
+/*$name = "Иван";
 
 echo 5%2;
 
@@ -20,7 +20,7 @@ elseif ($name == "Иван")
 }
 else {
     echo "Неправильное имя";
-}
+}*/
 
 
 ?>
