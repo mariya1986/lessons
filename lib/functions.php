@@ -1,12 +1,14 @@
 <?php
-function pripev($text)
+function login($l,$p)
 {
-    if($text)
+    require_once "goodusers.php";
+    if ($l==$goodlogin AND $p==$goodpass)
     {
-        echo $text;
+        echo "добро пожаловать";
+
     }
     else
     {
-        echo "Какой-то припев";
+        echo "неправильно";
     }
 }
