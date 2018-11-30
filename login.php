@@ -5,6 +5,6 @@
 </form>
 
 <?php
-require_once "lib/functions.php";
+require_once "lib/proba.php";
 
 autorization($_POST['name'],$_POST['pass']);
