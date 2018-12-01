@@ -1,5 +1,5 @@
 <?php
 require_once "lib/proba.php";
 
-login($_POST['login'],$_POST['pass']);
+autorization($_POST['login'],$_POST['pass']);
 
