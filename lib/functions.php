@@ -1,4 +1,5 @@
 <?php
+// подключение  и работа с БД
 function db($sql)
 {
     if (!$connection = mysqli_connect("localhost","mariya",12345,"mariya"))
@@ -18,16 +19,30 @@ function db($sql)
 
 }
 
-
+// авторизация
 function login($data)
 {
 
     $zapros = "SELECT * FROM users WHERE login='{$data['login']}'";
-    echo $zapros;
     $raw_data = db($zapros);
-    while ($user = mysqli_fetch_assoc($raw_data))
+
+    $user = mysqli_fetch_assoc($raw_data);
+
+    if($data['login']==$user['login'] AND $data['pass']==$user['pass'])
     {
-        echo $user['name']."<br>";
+        $_SESSION['loged'] = $user['name'];
+        echo "Добро пожаловать на сайт, {$user['name']}";
     }
+    else
+    {
+        echo "Неправильный пароль!";
+    }
+
+}
+
+// выход
+function logout()
+{
+    unset($_SESSION['loged']);
 }
 
